@@ -6,14 +6,17 @@
 
   <div class="row m-3">
     <div class="col">
-      <img src="https://images.dog.ceo/breeds/borzoi/n02090622_1082.jpg"
+      <img [src]="dog.message"
       width="200px"
       class="shadow rounded"
       />
     </div>
+
     <div class="row m-3">
       <div class="col">
-        borzoi
+        <span *ngFor = "let name of getName()">
+          {{name | titlecase}}
+        </span>
       </div>
     </div>
   </div>
